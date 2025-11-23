@@ -1,0 +1,99 @@
+
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 11pt;
+      line-height: 1.5;
+      margin: 40px;
+    }
+    pre, code {
+      font-size: 9pt;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-left: 3px solid #ccc;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    details {
+      margin-bottom: 1em;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+    h1, h2, h3, h4 {
+      margin-top: 2em;
+    }
+    ul {
+      margin-bottom: 1em;
+    }
+    .diagram {
+      font-family: monospace;
+      background: #fafafa;
+      padding: 10px;
+      border-left: 4px solid #bbb;
+      font-size: 9pt;
+    }
+  </style>
+</head>
+<body>
+  <h1>Enterprise SaaS Onboarding Case Study (PDF-Friendly)</h1>
+  <p>This version reformats complex diagrams into bulleted lists and collapses code sections to enhance readability in PDF format.</p>
+  <h2>Example Collapsed Code Section</h2>
+  <details>
+    <summary>View Integration Brick YAML</summary>
+    <pre><code>
+integration_name: RigER
+api_version: v2.1
+authentication: OAuth 2.0
+data_sync_frequency: Real-time (webhooks)
+
+endpoints:
+  - name: Field Tickets
+    method: GET
+    path: /api/v2/field-tickets
+    rate_limit: 100/minute
+
+  - name: Invoices
+    method: POST
+    path: /api/v2/invoices
+    rate_limit: 50/minute
+
+data_mappings:
+  - source: RigER.FieldTicket.ticketNumber
+    target: Platform.Invoice.externalReferenceId
+    transformation: String
+
+  - source: RigER.FieldTicket.serviceDate
+    target: Platform.Invoice.serviceDate
+    transformation: ISO8601Date
+
+error_handling:
+  retry_logic: Exponential backoff (max 5 attempts)
+  failed_sync_queue: Yes
+  alert_threshold: >10 failures in 1 hour
+    </code></pre>
+  </details>
+
+  <h2>Example Diagram Converted to Bulleted Text</h2>
+  <p><strong>Integration Brick Design Includes:</strong></p>
+  <ul>
+    <li>Pre-configured API connectors</li>
+    <li>Data mapping templates</li>
+    <li>Authentication/OAuth templates</li>
+    <li>Error handling & logging</li>
+    <li>Retry logic & queue management</li>
+    <li>Monitoring & alerting hooks</li>
+  </ul>
+  <p><strong>Implementation Approach:</strong></p>
+  <ul>
+    <li>Modular architecture (plug-and-play)</li>
+    <li>Configuration over customization</li>
+    <li>90% pre-built, 10% customer-specific</li>
+    <li>One-click deployment capability</li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* Form */
+figure{
+    width: 100%; 
+} 
+form{
+    display: flex;
+    gap: 12px;
+}
+.editor.editor--live{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.pad{
+    height: 22px;
+}
+.LiveFieldSection{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.LiveField{
+    box-shadow: none; 
+    border-radius: 4px;
+    height: 48px;
+    border: 1px solid rgb(17 36 62 / 10%);
+    background: rgba(255, 255, 255, 0.9);
+}
+.LiveField__header{
+    display: none;
+}
+.LiveField .LiveField__container{
+    padding: 0 !important;
+    background: none;
+}
+.LiveField__input{
+    border: none !important;
+    padding: 6px 16px;
+    color: #0e1e34;
+}
+.LiveField.LiveField--active{
+    box-shadow: none;
+}
+.submit .btn-primary{
+    width: 190px;
+    height: 48px;
+    box-shadow: none !important;
+}
+.submit .btn-primary:hover{
+    background: #234fdf;
+}
+.submit .btn-primary:hover{
+    background: #234fdf;
+}
+.submit span:hover{
+    box-shadow: none !important;
+}
+
+@media only screen and (max-width: 640px) {
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    form input{
+    }
+    .__standardMode figure.fieldSection{
+        margin: 0 !important;
+    }
+    .submit .btn-primary{
+        background: #fff !important;
+        color: #234fdf !important;
+        border: 1px solid rgb(17 36 62 / 10%);
+    }
+    .submit .btn-primary{
+        width: 100%;
+    }
+}

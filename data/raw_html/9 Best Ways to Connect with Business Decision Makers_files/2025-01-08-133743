@@ -1,0 +1,60 @@
+/* Form */
+form{
+    display: flex;
+    gap: 12px
+}
+.editor.editor--live{
+    padding-right: 8px !important;
+    padding-left: 16px !important;
+}
+.pad{
+    height: 22px;
+}
+.LiveFieldSection{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.LiveField{
+    box-shadow: none;
+    background: #fff;
+    border: 1px solid rgb(17 36 62 / 10%);
+    border-radius: 4px;
+    height: 48px;
+}
+.LiveField__header{
+    display: none;
+}
+.LiveField .LiveField__container{
+    padding: 0 !important;
+    background: none;
+}
+.LiveField__input{
+    border: none !important;
+    padding: 6px 16px;
+    color: #0e1e34;
+}
+.LiveField.LiveField--active{
+    box-shadow: none;
+}
+.submit .btn-primary{
+    width: 190px;
+    height: 48px;
+    box-shadow: none !important;
+}
+.submit .btn-primary:hover{
+    background: #234fdf;
+}
+.submit span:hover{
+    box-shadow: none !important;
+}
+
+@media screen and (max-width: 420px) {
+    form{
+        display: flex;
+        flex-direction: column;
+        padding-right: 8px;
+    }
+    .submit .btn-primary{
+        width: 100%;
+    }
+}

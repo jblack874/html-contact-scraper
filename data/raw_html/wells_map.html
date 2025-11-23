@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Wells Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+  <style> #map { height: 95vh; width: 100%; } </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+  <script>
+    var map = L.map('map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    map.fitBounds([46.0915338462216, -103.921788277288], [47.2977435022974, -102.942563294289]);
+    L.marker([46.0915338462216, -103.921788277288]).addTo(map).bindPopup('<b>Well 37900</b><br>Lat: 46.091534<br>Lon: -103.921788');
+L.marker([47.0084594147128, -103.197501510393]).addTo(map).bindPopup('<b>Well 37168</b><br>Lat: 47.008459<br>Lon: -103.197502');
+L.marker([47.0084596713835, -103.197320973352]).addTo(map).bindPopup('<b>Well 37169</b><br>Lat: 47.008460<br>Lon: -103.197321');
+L.marker([47.0084599280543, -103.19714043631]).addTo(map).bindPopup('<b>Well 37170</b><br>Lat: 47.008460<br>Lon: -103.197140');
+L.marker([47.008462418834, -103.20434182336]).addTo(map).bindPopup('<b>Well 35495</b><br>Lat: 47.008462<br>Lon: -103.204342');
+L.marker([47.0085634098414, -103.208995384926]).addTo(map).bindPopup('<b>Well 37214</b><br>Lat: 47.008563<br>Lon: -103.208995');
+L.marker([47.0392488685967, -103.216659348598]).addTo(map).bindPopup('<b>Well 37247</b><br>Lat: 47.039249<br>Lon: -103.216659');
+L.marker([47.0828606063037, -103.179011622126]).addTo(map).bindPopup('<b>Well 40794</b><br>Lat: 47.082861<br>Lon: -103.179012');
+L.marker([47.0828607993337, -103.178883029969]).addTo(map).bindPopup('<b>Well 40336</b><br>Lat: 47.082861<br>Lon: -103.178883');
+L.marker([47.0828609923638, -103.178754437813]).addTo(map).bindPopup('<b>Well 40410</b><br>Lat: 47.082861<br>Lon: -103.178754');
+L.marker([47.0828613784238, -103.1784972535]).addTo(map).bindPopup('<b>Well 40412</b><br>Lat: 47.082861<br>Lon: -103.178497');
+L.marker([47.0828615714539, -103.178368661343]).addTo(map).bindPopup('<b>Well 40413</b><br>Lat: 47.082862<br>Lon: -103.178369');
+L.marker([47.0828617644839, -103.178240069187]).addTo(map).bindPopup('<b>Well 40414</b><br>Lat: 47.082862<br>Lon: -103.178240');
+L.marker([47.2977435022974, -102.942563294289]).addTo(map).bindPopup('<b>Well 40922</b><br>Lat: 47.297744<br>Lon: -102.942563');
+  </script>
+</body>
+</html>
